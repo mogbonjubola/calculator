@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head><title> Simple Interest Calculator</title>
+<style>
+
+body{background-color:grey;
+    color:orange;
+    font-size:30px;
+
+}
+
+#demo{ font-size:50px;
+      color:red;
+      background-color:yellow;}
+#amount{background-color:yellow;
+        color:green;
+        font-size:50px;}
+
+</style>
+<script>
+function myFunction(){
+var pri= parseInt(document.getElementById("amt").value); 
+
+var rate= parseInt(document.getElementById("rate").value); 
+
+var dur= parseInt(document.getElementById("time").value); 
+
+
+var total= pri*rate*dur/100;
+
+document.getElementById("demo").innerHTML=total;
+
+}
+function myOtherFunction(x){ x.style.background="yellow";
+
+}
+
+
+function myInterest(){
+var pri= parseInt(document.getElementById("amt").value); 
+
+var rate= parseInt(document.getElementById("rate").value); 
+
+var dur= parseInt(document.getElementById("time").value); 
+
+
+var total= pri*rate*dur/100;
+var amount= total + pri;
+
+document.getElementById("amount").innerHTML=amount;
+}
+</script>
+</head>
+
+
+<body>
+<h1> Simple Interest Calculator</h1>
+<form>
+Principal:<input type="text" id="amt" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
+<p>
+
+Interest Rate: <input type="text" id="rate" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
+<p>
+
+Time Period: <input type="text" id="time" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
+<p>
+
+</form>
+
+<p>Your Interest is : <span id="demo"></span></p>
+
+<p> Amount Due After the specified number of Year is:<span id="amount"></span>
+<button onclick="myInterest()">This</button>
+ 
+</body>
+</html>
